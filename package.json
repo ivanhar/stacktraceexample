@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.6.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/*.{js,ts}"
+    ],
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports"
+    }
+  }
+}
